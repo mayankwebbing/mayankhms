@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: voila-material
+Version: 0.4.0
+Summary: Material design template for voila
+Home-page: https://github.com/martinRenou/voila-material
+Author: Martin Renou
+Author-email: martin.renou@gmail.com
+License: UNKNOWN
+Keywords: ipython,jupyter,widgets,voila
+Platform: UNKNOWN
+Requires-Dist: voila (>=0.2.1)
+
+UNKNOWN
+
+

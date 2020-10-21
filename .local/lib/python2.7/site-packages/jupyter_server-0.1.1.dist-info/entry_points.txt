@@ -1,0 +1,5 @@
+[console_scripts]
+jupyter-bundlerextension = jupyter_server.bundler.bundlerextensions:main
+jupyter-extension = jupyter_server.extensions:main
+jupyter-server = jupyter_server.serverapp:main
+

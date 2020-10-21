@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+    <meta name="X-XSS-Protection" content="1;mode=block">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+
+    <meta name="msapplication-TileColor" content="#F05F40">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#F05F40">
+    <meta name="description" content="Developed by Mayank Vishwakarma">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100|Montserrat" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin, mayankv03">
+   <title>Hospital Management System</title>
+   <!-- =============== VENDOR STYLES ===============-->
+   <!-- FONT AWESOME-->
+   <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+   <!-- SIMPLE LINE ICONS-->
+   <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+   <!-- ANIMATE.CSS-->
+   <link rel="stylesheet" href="vendor/animate.css/animate.min.css">
+   <!-- WHIRL (spinners)-->
+   <link rel="stylesheet" href="vendor/whirl/dist/whirl.css">
+   <!-- =============== PAGE VENDOR STYLES ===============-->
+   <!-- =============== BOOTSTRAP STYLES ===============-->
+   <link rel="stylesheet" href="app/css/bootstrap.css" id="bscss">
+   <!-- =============== APP STYLES ===============-->
+   <link rel="stylesheet" href="app/css/app.css" id="maincss">
+   <style>
+      a:hover{
+       text-decoration: none!important;
+      }
+
+   </style>
+   <link rel="shortcut icon" href="favicon/favicon.ico" />
+
+</head>
+
+<body class="layout-h">
+	<div class="wrapper">
+      <!-- top navbar-->
+      <header class="topnavbar-wrapper">
+         <!-- START Top Navbar-->
+         <nav role="navigation" class="navbar topnavbar">
+            <!-- START navbar header-->
+            <div class="navbar-header">
+               <a href="/" class="navbar-brand">
+                  <div class="brand-logo">
+                     HospitalManagementSystem
+                  </div>
+               </a>
+
+            </div>
+            <!-- END navbar header-->
+         </nav>
+         <!-- END Top Navbar-->
+      </header>
+      <!-- Main section-->
+      <section>
+         <!-- Page content-->
+         <div class="content-wrapper">
+            <div class="content-heading">
+               <i class="fa fa-dashboard">Dashboard</i>
+            </div>
+            <div class="row">
+             <div class="row">
+               <div class="col-lg-4 col-md-6">
+                  <!-- START widget-->
+                  <a href="patient.html">
+                  <div class="panel widget bg-success">
+                     <div class="row row-table">
+                        <div class="col-xs-4 text-center bg-success-dark pv-lg">
+                           <i class="fa fa-wheelchair" style="font-size:48px;"></i>
+                        </div>
+                        <div class="col-xs-8 pv-lg">
+                           <div class="h1 m0 text-bold" id="patientcount"></div>
+                           <div class="text-uppercase">Patient</div>
+                        </div>
+                     </div>
+                  </div>
+                     </a>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <a href="doctor.html">
+                  <!-- START widget-->
+                  <div class="panel widget bg-danger">
+                     <div class="row row-table">
+                        <div class="col-xs-4 text-center bg-danger-dark pv-lg">
+                          <i class="fa fa-user-md" style="font-size:48px;"></i>
+                        </div>
+                        <div class="col-xs-8 pv-lg">
+                           <div class="h1 m0 text-bold" id="doctorcount"></div>
+                           <div class="text-uppercase">Doctor</div>
+                        </div>
+                     </div>
+                  </div>
+                     </a>
+               </div>
+                  <div class="col-lg-4 col-md-6">
+                  <a href="appointment.html">
+                  <!-- START widget-->
+                  <div class="panel widget bg-primary">
+                     <div class="row row-table">
+                        <div class="col-xs-4 text-center bg-primary-dark pv-lg">
+                           <em class="icon-pencil fa-3x"></em>
+                        </div>
+                        <div class="col-xs-8 pv-lg">
+                           <div class="h1 m0 text-bold" id="appointmentcount"></div>
+                           <div class="text-uppercase">Appointment</div>
+                        </div>
+                     </div>
+                  </div>
+                     </a>
+               </div>
+
+
+
+            </div>
+
+         </div>
+         <div class="content-wrapper">
+               <div class="content-heading">
+               <i class="fa fa-dashboard">COVID-19 Dashboard</i>
+            </div>
+            </div>
+
+
+
+
+        <div class="row">
+             <div class="row">
+               <div class="col-lg-4 col-md-6">
+                  <!-- START widget-->
+                  <a>
+                  <div class="panel widget bg-primary">
+                     <div class="row row-table">
+                        <div class="col-xs-4 text-center bg-primary-dark pv-lg">
+                           <i class="fa fa-wheelchair" style="font-size:48px;"></i>
+                        </div>
+                        <div class="col-xs-8 pv-lg">
+                           <div class="h1 m0 text-bold" >{{confirmed_total}}</div>
+                           <div class="text-uppercase">Confirmed</div>
+                        </div>
+                     </div>
+                  </div>
+                     </a>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <a>
+                  <!-- START widget-->
+                  <div class="panel widget bg-danger">
+                     <div class="row row-table">
+                        <div class="col-xs-4 text-center bg-danger-dark pv-lg">
+                          <i class="fas fa-tombstone-alt" style="font-size:48px;"></i>
+                        </div>
+                        <div class="col-xs-8 pv-lg">
+                           <div class="h1 m0 text-bold">{{deaths_total}}</div>
+                           <div class="text-uppercase">Deaths</div>
+                        </div>
+                     </div>
+                  </div>
+                     </a>
+               </div>
+                  <div class="col-lg-4 col-md-6">
+                  <a>
+                  <!-- START widget-->
+                  <div class="panel widget bg-success">
+                     <div class="row row-table">
+                        <div class="col-xs-4 text-center bg-success-dark pv-lg">
+                           <em class="icon-pencil fa-3x"></em>
+                        </div>
+                        <div class="col-xs-8 pv-lg">
+                           <div class="h1 m0 text-bold">{{recovered_total}}</div>
+                           <div class="text-uppercase">Recovered</div>
+                        </div>
+                     </div>
+                  </div>
+                     </a>
+               </div>
+
+
+
+      </section>
+
+
+
+      <!-- Page footer-->
+      <footer>
+         <span>&copy; 2020 - MAYANKV03</span>
+         <div>
+         <span style="text-align:center;">Developed by Mayank Vishwakarma</span>
+         </div>
+      </footer>
+   </div>
+   <!-- =============== VENDOR SCRIPTS ===============-->
+   <!-- MODERNIZR-->
+   <script src="vendor/modernizr/modernizr.custom.js"></script>
+   <!-- JQUERY-->
+   <script src="vendor/jquery/dist/jquery.js"></script>
+   <!-- BOOTSTRAP-->
+   <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+   <!-- STORAGE API-->
+   <script src="vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+   <!-- JQUERY EASING-->
+   <script src="vendor/jquery.easing/js/jquery.easing.js"></script>
+   <!-- ANIMO-->
+   <script src="vendor/animo.js/animo.js"></script>
+   <!-- LOCALIZE-->
+   <script src="vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+   <!-- =============== PAGE VENDOR SCRIPTS ===============-->
+   <!-- =============== APP SCRIPTS ===============-->
+   <script src="app/js/app.js"></script>
+<script src="js/home.js"></script>
+</body>
+
+</html>
