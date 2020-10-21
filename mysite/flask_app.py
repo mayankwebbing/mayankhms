@@ -3,7 +3,6 @@ from flask import Flask, render_template
 
 import pandas as pd
 
-
 from flask_restful import Api
 from package.patient import Patients, Patient
 from package.doctor import Doctors, Doctor
