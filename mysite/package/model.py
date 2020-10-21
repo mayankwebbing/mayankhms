@@ -1,4 +1,7 @@
 import sqlite3
+import json
+with open('config.json') as data_file:
+    config = json.load(data_file)
 
 conn=sqlite3.connect(config['database'], check_same_thread=False)
 conn.execute('pragma foreign_keys=ON')

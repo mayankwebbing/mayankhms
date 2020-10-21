@@ -9,7 +9,7 @@ from package.doctor import Doctors, Doctor
 from package.appointment import Appointments, Appointment
 from package.common import Common
 
-app = Flask(__name__, static_url_path='')
+app = Flask(__name__)
 api = Api(app)
 
 api.add_resource(Patients, '/patient')
@@ -50,16 +50,28 @@ death_df = death_df.rename(columns={'province/state': 'state', 'country/region':
 country_df = country_df.rename(columns={'country_region': 'country'})
 # country_df.head()
 
+# total number of confirmed, death and recovered cases
+confirmed_total = int(country_df['confirmed'].sum())
+deaths_total = int(country_df['deaths'].sum())
+recovered_total = int(country_df['recovered'].sum())
+active_total = int(country_df['active'].sum())
 
 @app.route('/')
 def index():
-    # total number of confirmed, death and recovered cases
-    confirmed_total = int(country_df['confirmed'].sum())
-    deaths_total = int(country_df['deaths'].sum())
-    recovered_total = int(country_df['recovered'].sum())
-    active_total = int(country_df['active'].sum())
-
     return render_template('index.html', confirmed_total=confirmed_total, deaths_total=deaths_total, recovered_total=recovered_total, active_total=active_total)
+
+@app.route('/patient.html')
+def patient_html():
+	return render_template('patient.html', confirmed_total=confirmed_total, deaths_total=deaths_total, recovered_total=recovered_total, active_total=active_total)
+
+@app.route('/doctor.html')
+def doctor_html():
+	return render_template('doctor.html', confirmed_total=confirmed_total, deaths_total=deaths_total, recovered_total=recovered_total, active_total=active_total)
+
+@app.route('/appointment.html')
+def appointment_html():
+	return render_template('appointment.html', confirmed_total=confirmed_total, deaths_total=deaths_total, recovered_total=recovered_total, active_total=active_total)
+
 
 if __name__ == '__main__':
     app.run(debug=True,host='localhost',port='5601')

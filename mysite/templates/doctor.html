@@ -1,85 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-   <link rel="shortcut icon" href="favicon/favicon.ico" />
-   <meta name="X-XSS-Protection" content="1;mode=block">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-	<link rel="manifest" href="favicon/site.webmanifest">
-
-    <meta name="msapplication-TileColor" content="#F05F40">
-    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
-    <meta name="theme-color" content="#F05F40">
-    <meta name="description" content="Developed by Mayank Vishwakarma">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100|Montserrat" rel="stylesheet">
-
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-   <meta name="description" content="Bootstrap Admin App + jQuery">
-   <meta name="keywords" content="mayankv03, app, responsive, jquery, bootstrap, dashboard, admin">
-   <title>Hospital Management System</title>
-   <!-- =============== VENDOR STYLES ===============-->
-   <!-- FONT AWESOME-->
-   <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
-   <!-- SIMPLE LINE ICONS-->
-   <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
-   <!-- ANIMATE.CSS-->
-   <link rel="stylesheet" href="vendor/animate.css/animate.min.css">
-   <!-- WHIRL (spinners)-->
-   <link rel="stylesheet" href="vendor/whirl/dist/whirl.css">
-    <link rel="stylesheet" href="vendor/sweetalert/dist/sweetalert.css">
-     <!-- DATATABLES-->
-   <link rel="stylesheet" href="vendor/datatables-colvis/css/dataTables.colVis.css">
-   <link rel="stylesheet" href="vendor/datatables/media/css/dataTables.bootstrap.css">
-   <link rel="stylesheet" href="vendor/dataTables.fontAwesome/index.css">
-   <!-- =============== PAGE VENDOR STYLES ===============-->
-   <!-- =============== BOOTSTRAP STYLES ===============-->
-   <link rel="stylesheet" href="app/css/bootstrap.css" id="bscss">
-   <!-- =============== APP STYLES ===============-->
-   <link rel="stylesheet" href="app/css/app.css" id="maincss">
-</head>
-
-<body class="layout-h">
-   <div class="wrapper">
-      <!-- top navbar-->
-      <header class="topnavbar-wrapper">
-         <!-- START Top Navbar-->
-         <nav role="navigation" class="navbar topnavbar">
-            <!-- START navbar header-->
-            <div class="navbar-header">
-               <a href="/" class="navbar-brand">
-                  <div class="brand-logo">
-                     HospitalManagementSystem
-                  </div>
-				</a>
-
-            </div>
-            <!-- END navbar header-->
-            <!-- START Nav wrapper-->
-            <div class="nav-wrapper">
-
-            </div>
-            <!-- END Nav wrapper-->
-            <!-- START Search form-->
-            <form role="search" action="search.html" class="navbar-form">
-               <div class="form-group has-feedback">
-                  <input type="text" placeholder="Type and hit enter ..." class="form-control">
-                  <div data-search-dismiss="" class="fa fa-times form-control-feedback"></div>
-               </div>
-               <button type="submit" class="hidden btn btn-default">Submit</button>
-            </form>
-            <!-- END Search form-->
-         </nav>
-         <!-- END Top Navbar-->
-      </header>
-      <!-- sidebar-->
-
-      <!-- offsidebar-->
-
+{% extends "base.html" %}
+{% block content %}
       <!-- Main section-->
       <section>
          <!-- Page content-->
@@ -121,14 +41,7 @@
                </div>
          </div>
       </section>
-      <!-- Page footer-->
-      <footer>
-         <span>&copy; 2020 - MAYANKV03</span>
-         <div>
-         <span style="text-align:center;">Developed by Mayank Vishwakarma</span>
-         </div>
-      </footer>
-   </div>
+      
 
     <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
       <div class="modal-dialog">
@@ -181,29 +94,6 @@
    </div>
    <!-- =============== VENDOR SCRIPTS ===============-->
    <!-- MODERNIZR-->
-   <script src="vendor/modernizr/modernizr.custom.js"></script>
-   <!-- JQUERY-->
-   <script src="vendor/jquery/dist/jquery.js"></script>
-   <!-- BOOTSTRAP-->
-   <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="vendor/datatables/media/js/jquery.dataTables.min.js"></script>
-   <script src="vendor/datatables-colvis/js/dataTables.colVis.js"></script>
-   <script src="vendor/datatables/media/js/dataTables.bootstrap.js"></script>
-   <script src="vendor/serialize/jquery.serializejson.js"></script>
-   <!-- STORAGE API-->
-   <script src="vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
-   <!-- JQUERY EASING-->
-   <script src="vendor/jquery.easing/js/jquery.easing.js"></script>
-   <!-- ANIMO-->
-   <script src="vendor/animo.js/animo.js"></script>
-    <script src="vendor/parsley/parsley.min.js"></script>
-       <script src="vendor/sweetalert/dist/sweetalert.min.js"></script>
-   <!-- LOCALIZE-->
-   <script src="vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
-   <!-- =============== PAGE VENDOR SCRIPTS ===============-->
-   <!-- =============== APP SCRIPTS ===============-->
-   <script src="app/js/app.js"></script>
-<script src="js/doctor.js"></script>
-</body>
 
-</html>
+
+{% endblock %}
